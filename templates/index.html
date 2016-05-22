@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notifications Quickstart</title>
+    <link rel="stylesheet" type="text/css" href="static/notifications-quickstart.css"/>
+  </head>
+  <body>
+    <h1>Notifications Environment Setup</h1>
+    <p>The following system environment variables should be set:</p>
+    <table>
+      <tr>
+        <th>TWILIO_ACCOUNT_SID</th>
+        {% if account_sid %}
+          <td class="good">{{ account_sid }}</td>
+        {% else %}
+          <td class="unset">Not Configured</td>
+        {% endif %}
+      </tr>
+      <tr>
+        <th>TWILIO_APN_CREDENTIAL_SID</th>
+        {% if apn_sid %}
+          <td class="good">{{ apn_sid }}</td>
+        {% else %}
+          <td class="unset">Not Configured</td>
+        {% endif %}
+      </tr>
+      <tr>
+        <th>TWILIO_GCM_CREDENTIAL_SID</th>
+        {% if gcm_sid %}
+          <td class="good">{{ gcm_sid }}</td>
+        {% else %}
+          <td class="unset">Not Configured</td>
+        {% endif %}
+      </tr>
+      <tr>
+        <th>TWILIO_NOTIFICATION_SERVICE_SID</th>
+        {% if service_sid %}
+          <td class="good">{{ service_sid }}</td>
+        {% else %}
+          <td class="unset">Not Configured</td>
+        {% endif %}
+      </tr>
+      <tr>
+        <th>TWILIO_ACCOUNT_SID</th>
+        {% if account_sid %}
+          <td class="good">{{ account_sid }}</td>
+        {% else %}
+          <td class="unset">Not Configured</td>
+        {% endif %}
+      </tr>                        
+      <tr>
+        <th>TWILIO_AUTH_TOKEN</th>
+        {% if auth_token %}
+          <td class="good">Secret token configured</td>
+        {% else %}
+          <td class="unset">Not Configured</td>
+        {% endif %}
+      </tr>
+    </table>
+  </body>
+</html>
