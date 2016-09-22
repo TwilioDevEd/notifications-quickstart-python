@@ -23,5 +23,5 @@ if gcm_sid:
 else:
     print 'No GCM Credentials configured - add in .env, if available.'
 
-service = client.notifications.v1.services.create(**service_data)
+service = client.notify.v1.services.create(**service_data)
 print service
