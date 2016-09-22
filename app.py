@@ -35,7 +35,7 @@ def register():
     print content
     
     # Get a reference to the notification service
-    service = client.notifications.v1.services(service_sid)
+    service = client.notify.v1.services(service_sid)
 
     # Create the binding
     binding = service.bindings.create(

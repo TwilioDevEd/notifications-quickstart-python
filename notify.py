@@ -11,7 +11,7 @@ client = Client(account_sid, auth_token)
 
 # Create a reference to the user notification service
 if service_sid:
-  service = client.notifications.v1.services(service_sid)
+  service = client.notify.v1.services(service_sid)
   # Create a notification for a given identity
   identity = sys.argv[1]
   print 'Sending a notification to identity: ' + identity
