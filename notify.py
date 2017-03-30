@@ -11,13 +11,13 @@ client = Client(account_sid, auth_token)
 
 # Create a reference to the user notification service
 if service_sid:
-  service = client.notify.v1.services(service_sid)
+  service = client.notify.services(service_sid)
   # Create a notification for a given identity
   identity = sys.argv[1]
-  print 'Sending a notification to identity: ' + identity
+  print('Sending a notification to identity: ' + identity)
   notification = service.notifications.create(
     identity=identity,
     body='Hello ' + identity + '!')
-  print notification
+  print(notification)
 else:
-  print 'Please put a SID for a valid notification service in .env'
+  print('Please put a SID for a valid notification service in .env')

@@ -1,3 +1,7 @@
+<a href="https://www.twilio.com">
+  <img src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg" alt="Twilio" width="250" />
+</a>
+
 # Notifications Quickstart for Python
 
 This application should give you a ready-made starting point for integrating notifications into your
@@ -15,7 +19,7 @@ Twilio Notification_Service SID | Use the create_service.py script to generate t
 
 ## Setting Up The Python Application
 
-This application uses the lightweight [Flask Framework](http://flask.pocoo.org/). 
+This application uses the lightweight [Flask Framework](http://flask.pocoo.org/).
 Begin by creating a configuration file for your application:
 
 ```bash
@@ -42,13 +46,13 @@ Now we should be all set! Run the application using the `python` command.
 python app.py
 ```
 
-Your application should now be running at http://localhost:5000. 
+Your application should now be running at http://localhost:5000.
 
 # Usage
 
-When your app receives a 'registration' in the form of a POST request to the /register endpoint from a mobile client, it will create a binding. A binding is the address Twilio gives your app installation. It lets our service know where to send notifications.  
+When your app receives a 'registration' in the form of a POST request to the /register endpoint from a mobile client, it will create a binding. A binding is the address Twilio gives your app installation. It lets our service know where to send notifications.
 
-To send a notification to the client run the notify script 
+To send a notification to the client run the notify script
 
 ```bash
   python notify.py IDENTITY_HERE
