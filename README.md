@@ -1,3 +1,7 @@
+<a href="https://www.twilio.com">
+  <img src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg" alt="Twilio" width="250" />
+</a>
+
 # Notifications Quickstart for Python
 
 This application should give you a ready-made starting point for integrating notifications into your
@@ -9,13 +13,13 @@ Credential | Description
 Twilio Account SID | Your main Twilio account identifier - [find it on your dashboard](https://www.twilio.com/user/account/settings).
 Twilio APN Credential SID | Adds iOS notification ability to your app - [generate one here](https://www.twilio.com/user/account/ip-messaging/credentials). You'll need to provision your APN push credentials to generate this. See [this](https://www.twilio.com/docs/api/ip-messaging/guides/push-notifications-ios) guide on how to do that. (Optional)
 Twilio GCM Credential SID | Adds Android/GCM notification ability to your app - [generate one here](https://www.twilio.com/user/account/ip-messaging/credentials). You'll need to provision your GCM push credentials to generate this. See [this](https://www.twilio.com/docs/api/ip-messaging/guides/push-notifications-android) guide on how to do that. (Optional)
-Twilio Notification_Service SID | Use the create_service.py script to generate this. Just run 'python create_service.py' in your terminal, after you add the above configuration values to the `.env` file.
+Twilio Notification_Service SID | Use the create_service.py script to generate this. Just run 'python create-service.py' in your terminal, after you add the above configuration values to the `.env` file.
 
 
 
 ## Setting Up The Python Application
 
-This application uses the lightweight [Flask Framework](http://flask.pocoo.org/). 
+This application uses the lightweight [Flask Framework](http://flask.pocoo.org/).
 Begin by creating a configuration file for your application:
 
 ```bash
@@ -42,13 +46,13 @@ Now we should be all set! Run the application using the `python` command.
 python app.py
 ```
 
-Your application should now be running at http://localhost:5000. 
+Your application should now be running at http://localhost:5000.
 
 # Usage
 
-When your app receives a 'registration' in the form of a POST request to the /register endpoint from a mobile client, it will create a binding. A binding is the address Twilio gives your app installation. It lets our service know where to send notifications.  
+When your app receives a 'registration' in the form of a POST request to the /register endpoint from a mobile client, it will create a binding. A binding is the address Twilio gives your app installation. It lets our service know where to send notifications.
 
-To send a notification to the client run the notify script 
+To send a notification to the client run the notify script
 
 ```bash
   python notify.py IDENTITY_HERE
