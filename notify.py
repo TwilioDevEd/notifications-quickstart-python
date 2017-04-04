@@ -17,7 +17,8 @@ if service_sid:
   print('Sending a notification to identity: ' + identity)
   notification = service.notifications.create(
     identity=identity,
-    body='Hello ' + identity + '!')
-  print(notification)
+    body='Hello World!')
+  print notification
+
 else:
   print('Please put a SID for a valid notification service in .env')
